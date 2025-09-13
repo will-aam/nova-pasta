@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* adding Inter font variable to theme configuration */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 98%; /* #FAFAFA off-white */
+    --foreground: 0 0% 17%; /* #2C2C2C cinza escuro */
+
+    --card: 0 0% 100%; /* branco */
+    --card-foreground: 0 0% 17%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 17%;
+
+    --primary: 217 91% 60%; /* #2563EB azul médio */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 271 81% 56%; /* #9333EA roxo suave */
+    --secondary-foreground: 0 0% 100%;
+
+    --accent: 217 91% 60%; /* azul igual ao primário */
+    --accent-foreground: 0 0% 100%;
+
+    --muted: 220 10% 92%; /* #E5E7EB cinza claro */
+    --muted-foreground: 0 0% 35%;
+
+    --destructive: 0 75% 50%; /* vermelho controlado */
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 10% 88%;
+    --input: 0 0% 100%;
+    --ring: 217 91% 60% / 0.4;
+
+    /* Gráficos */
+    --chart-1: 217 91% 60%; /* azul */
+    --chart-2: 271 81% 56%; /* roxo */
+    --chart-3: 200 60% 45%; /* azul esverdeado */
+    --chart-4: 45 93% 58%; /* amarelo */
+    --chart-5: 340 65% 55%; /* rosa suave */
+
+    --radius: 0.5rem;
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 0 0% 17%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 271 81% 56%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 220 10% 88%;
+    --sidebar-ring: 217 91% 60% / 0.4;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 84% 4.9%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 224.3 76.3% 94.1%;
+    --chart-1: 217.2 91.2% 59.8%;
+    --chart-2: 45 93% 63%;
+    --chart-3: 142 76% 78%;
+    --chart-4: 217 91% 65%;
+    --chart-5: 271 81% 61%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
